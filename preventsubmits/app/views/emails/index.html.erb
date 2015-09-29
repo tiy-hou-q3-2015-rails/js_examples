@@ -1,0 +1,21 @@
+<h1>Emails#index</h1>
+
+<p>
+  <%= link_to 'Compose New Email', new_email_path %>
+</p>
+
+<table>
+  <tr>
+    <th>Recipient</th>
+    <th>Subject</th>
+    <th>Excerpt</th>
+  </tr>
+
+  <% @emails.each do |email| %>
+    <tr>
+      <td><%= email.recipient %></td>
+      <td><%= email.subject %></td>
+      <td><%= truncate email.body %></td>
+    </tr>
+  <% end %>
+</table>

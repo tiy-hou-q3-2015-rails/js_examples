@@ -1,0 +1,27 @@
+<h1>Tweets#new</h1>
+<%= simple_form_for @tweet do |f| %>
+
+  <div class="row">
+    <div class="col-xs-12">
+      <%= f.input :body, label: false, as: :text, placeholder: "What's Happening?" %>
+    </div>
+  </div>
+
+  <div class="row form-group">
+    <div class="col-xs-10">
+      <div class="text-right">
+        <div id="counter"></div>
+      </div>
+    </div>
+    <div class="col-xs-2">
+      <%= f.submit class: "btn btn-lg btn-success" %>
+    </div>
+
+  </div>
+
+
+
+
+
+
+<% end %>

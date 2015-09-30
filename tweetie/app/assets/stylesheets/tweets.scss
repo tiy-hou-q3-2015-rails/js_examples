@@ -1,0 +1,16 @@
+#tweet_body {
+  height: 40px;
+  &.active {
+    height: 150px;
+  }
+
+}
+.red {
+  color: red;
+}
+.maroon {
+  color: darken(red, 20%);
+}
+.grey {
+  color: #cccccc;
+}

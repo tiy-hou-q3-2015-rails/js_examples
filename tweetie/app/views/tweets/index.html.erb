@@ -1,0 +1,19 @@
+<h1>Tweets#index</h1>
+
+<div class="well">
+  <div class="text-right">
+    <%= link_to 'New Tweet', new_tweet_path, class: "btn btn-primary" %>
+  </div>
+</div>
+
+<script>
+
+  $(window).ready(function(){
+    $.getJSON("/movies.json").then(function(data){
+      var movies = data.movies;
+      console.log(movies);
+      // use underscore on the data
+    })
+  });
+
+</script>

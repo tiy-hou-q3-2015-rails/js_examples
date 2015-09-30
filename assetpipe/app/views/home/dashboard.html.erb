@@ -1,0 +1,67 @@
+<h1>Home#dashboard</h1>
+<p>Find me in app/views/home/dashboard.html.erb</p>
+
+<select id="season-selector">
+  <option value="">Please select which months to show</option>
+  <option value="Winter">Winter</option>
+  <option value="Spring">Spring</option>
+  <option value="Summer">Summer</option>
+  <option value="Fall">Fall</option>
+</select>
+
+<div id="fall_months">
+</div>
+
+<script>
+
+function currentlySelectedSeason(){
+  return $("#season-selector").val();
+}
+
+
+
+function allMonths(){
+
+  return [
+    {
+      name: "January",
+      season: "Winter",
+      temp: 60
+    },
+    {
+      name: "February",
+      season: "Winter",
+      temp: 55
+    },
+    {
+      name: "October",
+      season: "Fall",
+      temp: 80
+    },
+    {
+      name: "November",
+      season: "Fall",
+      temp: 70
+    }
+  ];
+
+}
+
+$(window).ready(function(){
+
+  $("#season-selector").on("change", function(){
+    $("#fall_months").html("");
+    var selectedSeason = currentlySelectedSeason();
+    var months = allMonths();
+    var filteredMonths = _.where(months, {season: selectedSeason});
+
+    filteredMonths.forEach(function(month){
+      $("#fall_months").append("<p>" + month.name + "</p>");
+    });
+  });
+
+
+
+});
+
+</script>

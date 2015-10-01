@@ -1,0 +1,8 @@
+setTimeout(function(){
+  $("#game_board").html("<%= j render partial: "game" %>");
+
+  $("a.playit").on("click", function(){
+    // mark X instantly
+    $(this).find(".tile").text("X");
+  })
+}, 1500);

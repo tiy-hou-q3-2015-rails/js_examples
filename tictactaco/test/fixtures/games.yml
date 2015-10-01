@@ -1,0 +1,23 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  position_1: MyString
+  position_2: MyString
+  position_3: MyString
+  position_4: MyString
+  position_5: MyString
+  position_6: MyString
+  position_7: MyString
+  position_8: MyString
+  position_9: MyString
+
+two:
+  position_1: MyString
+  position_2: MyString
+  position_3: MyString
+  position_4: MyString
+  position_5: MyString
+  position_6: MyString
+  position_7: MyString
+  position_8: MyString
+  position_9: MyString

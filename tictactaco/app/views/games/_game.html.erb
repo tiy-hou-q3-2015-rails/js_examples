@@ -1,0 +1,13 @@
+<% if @game.winner.present? %>
+  <%= @game.winner %> WINS
+<% end %>
+
+<div class="game">
+  <% (1..9).to_a.each do |i| %>
+    <%= link_to play_game_path(id: @game.id, position: i), method: :post, class: "playit", remote: true do %>
+      <div id="position_<%=i %>" class="tile">
+        <%= @game.tile i %>
+      </div>
+    <% end %>
+  <% end %>
+</div>
